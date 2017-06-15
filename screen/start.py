@@ -1,6 +1,6 @@
 import arcade
 
-from ttd.screen.tutorial import TutorialScreen
+from screen.tutorial import TutorialScreen
 
 
 class StartScreen:

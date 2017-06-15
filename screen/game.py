@@ -1,6 +1,6 @@
 import arcade
 
-from ttd.gui.day import DayGui
+from gui.day import DayGui
 
 
 class GameScreen:

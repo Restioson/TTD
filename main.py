@@ -11,7 +11,7 @@ import time
 
 import arcade
 
-from ttd.screen.start import StartScreen
+from screen.start import StartScreen
 
 
 class Game(arcade.Window):
