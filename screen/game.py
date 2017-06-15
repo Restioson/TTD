@@ -1,6 +1,6 @@
 import arcade
 
-from gui.day import DayGui
+from gui.patients import PatientsGui
 
 
 class GameScreen:
@@ -12,7 +12,7 @@ class GameScreen:
         self.main = main
 
         # General
-        self.gui = DayGui(self, width, height)
+        self.gui = PatientsGui(self, width, height)
 
         # PATIENTS gui screen
         self.patient_index = 0

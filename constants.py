@@ -1,9 +1,9 @@
 BUDGET = 5000
 TREATMENT_COST = 500
 PATIENTS_PER_DAY = 15
-HOSPITAL_BONUS = 25
+HOSPITAL_BONUS = 35
 
-# Tuple list of name, chance (1 in x), and survival impact
+# Tuple list of name, chance, and survival impact
 SYMPTOMS = (
 
     ("coughing", 0.2, 1),

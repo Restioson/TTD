@@ -19,7 +19,7 @@ class PatientsGui:
         self.patients = PatientsGui.generate_patients(15)
         self.patients_order = []
         self.current_patient_text = None
-        self.cur_gui = "triaging"
+        self.cur_gui = "day"
 
         # DAY gui
         self.day = 1
@@ -84,7 +84,6 @@ class PatientsGui:
 
                 else:
                     self.simulate()
-                    self.day += 1
                     self.cur_gui = "death"
 
         if key == arcade.key.SPACE:
@@ -95,10 +94,9 @@ class PatientsGui:
 
                 else:
                     self.simulate()
-                    self.day += 1
                     self.cur_gui = "death"
 
-            else:
+            elif self.cur_gui == "death":
                 self.cur_gui = "day"
                 self.day += 1
 
@@ -109,7 +107,8 @@ class PatientsGui:
 
         for patient in self.patients:
 
-            hospital_bonus = 35 - self.patients_order.index(patient) * 5 if patient in self.patients_order else 0
+            hospital_bonus = constants.HOSPITAL_BONUS - self.patients_order.index(patient) * 5 \
+                if patient in self.patients_order else 0
             survival_chance = patient.survival_chance + hospital_bonus
             survive = random.randint(1, 100)
 
@@ -119,10 +118,12 @@ class PatientsGui:
     def update(self, dt: float):
 
         if self.cur_gui == "day":
+
             if self.shown_day < 1:
                 self.shown_day += dt
 
             else:
+                self.shown_day = 0
                 self.cur_gui = "triaging"
                 self.patient_index = 0
                 self.patients = PatientsGui.generate_patients(15)
@@ -158,7 +159,6 @@ class PatientsGui:
             self.day_text = arcade.create_text(f"Day {self.day}", arcade.color.BLACK, 20,
                                                align="center", anchor_x="center", anchor_y="center")
             arcade.render_text(self.day_text, self.width / 2, self.height / 2)
-
 
 
 class Patient:
