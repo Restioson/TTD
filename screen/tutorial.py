@@ -20,20 +20,14 @@ class TutorialScreen:
 
             f"You start with a budget of R{constants.BUDGET} per day",
 
-            "There are 3 possible actions:\n"
-            "Treat    --    Triage    --    Diagnose",
+            "There are 2 possible actions:\n"
+            "Treat    --   Diagnose",
 
             f"Treating takes the biggest amount of money, R{constants.TREATMENT_COST}\n"
             f"Since you have R{constants.BUDGET}, you can treat "
-            f"{int(constants.BUDGET / constants.TREATMENT_COST)} patients,\n"
-            "assuming that you do not diagnose any patients",
+            f"{int(constants.BUDGET / constants.TREATMENT_COST)} patients.\n"
 
             "Treating a patient will cure them of their ailments.\n"
-
-
-            f"Diagnosing takes R{constants.DIAGNOSE_COST}. This is equivalent to\n"
-            f"the price of treating {int(constants.TREATMENT_COST / constants.DIAGNOSE_COST)}, "
-            "so diagnose carefully!",
 
             "Triaging is the act of choosing which order you will treat your patients.\n"
             "However, if you do not treat a patient soon enough, then they may die!",

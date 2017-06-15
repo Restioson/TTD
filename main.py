@@ -16,7 +16,7 @@ from screen.start import StartScreen
 
 class Game(arcade.Window):
     def __init__(self, width: int, height: int):
-        super().__init__(width, height)
+        super().__init__(width, height, "TTD")
 
         self.last_frame = time.time()
         self.update_accumulator = 0

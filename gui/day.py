@@ -1,5 +1,7 @@
 import arcade
 
+from gui.patients import PatientsGui
+
 
 class DayGui:
     def __init__(self, screen, width: int, height: int):
@@ -19,8 +21,14 @@ class DayGui:
             self.shown_day += dt
 
         else:
-            # self.screen.gui = GuiScreen.PATIENTS  # TODO
+            self.screen.gui = PatientsGui(self.screen, self.width, self.height)
             pass
+
+    def key_press(self, key: int, modifier: int):
+        pass
+
+    def key_release(self, key: int, modifier: int):
+        pass
 
     def draw(self):
 

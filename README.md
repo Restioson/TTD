@@ -34,5 +34,11 @@ standardly.
 
 
 ## Installation
-To install the game, you will need Python 3.6, and `arcade` installed. It can be installed with
+To install the game, you will need Python 3.6, `arcade`, and `numpy` installed. It can be installed with
 `pip`
+
+## Howto
+- Space to navigate tutorial
+- Number of preference for patient to triage (0 indexed!)
+
+![Epic tutorial](https://i.imgur.com/lFfwJVf.png "Save him")
